@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
 
   filter(category: string)
   {
-    console.log('filter:' + category);
+    console.log('filter2:' + category);
   }
 
 }

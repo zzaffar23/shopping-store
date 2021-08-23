@@ -1,31 +1,25 @@
-.category {
-  text-align: center;
-}
-
-.Jewelry {
-  width: 82px;
-  margin-top: 30px;
-}
-
-.Jewelry h6 {
-  padding-top:18px;;
-}
-
-.item {
-  max-width:300px;
-  width:300px;
-  text-align: center;
-}
-
-a h4 {
+.search-icon {
+  position: absolute;
+  z-index: 10;
+  right: 76%;
+  top:24px;
   color:rgb(13, 110, 253);
 }
 
-a:hover h4 {
-  text-decoration: underline;
+.badge {
+  top:-12px;
+  left:-30px;
 }
 
-a:hover {
-  cursor:pointer;
-
-}
+.card-top
+ {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   min-width: 0;
+   word-wrap: break-word;
+   background: #fff;
+   background-clip: border-box;
+   border:1px solid rgb(0, 0, 0.2);
+   border-radius: .25rem;
+ }

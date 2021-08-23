@@ -1,12 +1,19 @@
-<div class="card-top container-fluid">
-  <div class="container d-flex horizontal">
-    <div class="item" *ngFor="let category of categories">
-      <a (click)="filter(category.name)">
-        <img src="{{category.image}}" class="{{category.name}}" alt="">
-        <h4 class="category" [style.padding-top]="category.name ==='Jewelry' ? '18px' : ''">{{category.name}}</h4>
-      </a>
+<header>
+  <div class="navbar bg-primary shadow">
+    <div class="navbar-brand align-item-center d-flex" [style.color]="'white'">
+      &nbsp;&nbsp;<i class="fas fa-shipping-fast fa-2x" aria-hidden="true">
+        <strong>&nbsp;Flipkart&nbsp;</strong>
+      </i>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="search products">
+      </div>
+      <span class="fas fa-search search-icon"></span>
     </div>
+    <button class="btn btn-primary" routerLink="./cart">
+      <i style="font-size:40px;" class="fas fa-cart-plus"></i>
+      <div class="badge bg-danger">1</div>
+    </button>
   </div>
-</div>
+</header>
 
 

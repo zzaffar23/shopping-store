@@ -1,0 +1,10 @@
+<div class="card-top container-fluid">
+  <div class="container d-flex horizontal">
+    <div class="item" *ngFor="let category of categories">
+      <a (click)="filter(category.name)">
+        <img src="{{category.image}}" class="{{category.name}}" alt="">
+        <h4 class="category" [style.padding-top]="category.name ==='Jewelry' ? '18px' : ''">{{category.name}}</h4>
+      </a>
+    </div>
+  </div>
+</div>

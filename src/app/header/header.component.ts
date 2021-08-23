@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../service/api.service';
 
 @Component({
   selector: 'app-header',
@@ -7,21 +6,11 @@ import { ApiService } from '../service/api.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  categories: any;
 
-  constructor(private apiService: ApiService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.apiService.getCategories().subscribe(
-      categories => {
-        this.categories = categories;
-        console.log(categories);
-      })
-  }
 
-  filter(category: string)
-  {
-    console.log('filter2:' + category);
   }
 
 }

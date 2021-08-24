@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/service/api.service';
+import { ProductService } from 'src/app/service/product.service';
 
 @Component({
   selector: 'app-products-categories',
@@ -8,10 +8,11 @@ import { ApiService } from 'src/app/service/api.service';
 })
 export class CategoriesComponent implements OnInit {
   categories: any;
-  constructor(private apiService: ApiService) { }
+  products: any[] = [];
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.apiService.getCategories().subscribe(
+    this.productService.getCategories().subscribe(
       categories => {
         this.categories = categories;
         console.log(categories);
@@ -20,7 +21,9 @@ export class CategoriesComponent implements OnInit {
 
   filter(category: string)
   {
-    console.log('filter:' + category);
+    this.products =  this.productService.getFilteredProducts(category.toLocaleLowerCase());
+    this.productService.filteredProduct$.next(this.products);
+    console.log(this.products);
   }
 
 }

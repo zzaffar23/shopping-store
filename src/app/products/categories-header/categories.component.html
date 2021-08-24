@@ -3,7 +3,7 @@
     <div class="item" *ngFor="let category of categories">
       <a (click)="filter(category.name)">
         <img src="{{category.image}}" class="{{category.name}}" alt="">
-        <h4 class="category" [style.padding-top]="category.name ==='Jewelry' ? '18px' : ''">{{category.name}}</h4>
+        <h4 class="category" [style.padding-top]="category.name ==='Jewelery' ? '18px' : ''">{{category.name}}</h4>
       </a>
     </div>
   </div>
